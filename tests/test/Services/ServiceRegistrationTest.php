@@ -16,7 +16,6 @@ use Brevo\Client\Api\EmailCampaignsApi;
 use Brevo\Client\Api\ExternalFeedsApi;
 use Brevo\Client\Api\FilesApi;
 use Brevo\Client\Api\FoldersApi;
-use Brevo\Client\Api\InboundParsingApi;
 use Brevo\Client\Api\ListsApi;
 use Brevo\Client\Api\MasterAccountApi;
 use Brevo\Client\Api\NotesApi;
