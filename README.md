@@ -14,9 +14,13 @@ It provides the following features
 
 ## Installation
 
+For Laravel 11.x
+
+      composer require juanparati/brevosuite "^11.0"
+
 For Laravel 10.x
 
-      composer require juanparati/brevosuite
+      composer require juanparati/brevosuite "^10.0"
 
 For older Laravel versions check [Sendinblue v3 for Laravel](https://github.com/juanparati/Sendinblue).
    
