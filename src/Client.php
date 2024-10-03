@@ -77,7 +77,7 @@ class Client
      */
     public function getModel(string $model, array $data = []): ModelInterface
     {
-        $model = str_contains($model, '\\') ? $model : ('Brevo\\Client\\Api\\' . $model);
+        $model = str_contains($model, '\\') ? $model : ('Brevo\\Client\\Model\\' . $model);
         return new $model($data);
     }
 
