@@ -2,6 +2,8 @@
 namespace Juanparati\BrevoSuite;
 
 
+use Illuminate\Contracts\Container\BindingResolutionException;
+
 /**
  * SmsMessage is a wrapper for Laravel notifications messages
  *
@@ -23,6 +25,7 @@ class SmsMessage
      *
      * @param string $content
      * @param string $type
+     * @throws BindingResolutionException
      */
     public function __construct(string $content, string $type = 'transactional')
     {

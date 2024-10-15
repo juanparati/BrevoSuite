@@ -2,6 +2,8 @@
 namespace Juanparati\BrevoSuite;
 
 
+use Illuminate\Contracts\Container\BindingResolutionException;
+
 /**
  * Class TemplateMessage.
  *
@@ -44,6 +46,7 @@ class TemplateMessage
      * TemplateMessage constructor.
      *
      * @param int $template_id
+     * @throws BindingResolutionException
      */
     public function __construct(int $template_id)
     {

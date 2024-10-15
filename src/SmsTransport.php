@@ -66,7 +66,7 @@ class SmsTransport implements BrevoSuiteSmsTransportContract
 
 
     /**
-     * Transforms Model into SendTransacSms.
+     * Transforms Model into SendTransactSms.
      *
      * @param SmsModel $message
      * @return SendTransacSms
