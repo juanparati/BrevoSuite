@@ -16,7 +16,7 @@
         "php": ">=8.2",
         "laravel/framework": "^11.0.0",
         "illuminate/mail": "^11.0.0",
-        "getbrevo/brevo-php": "~v1.0.2",
+        "getbrevo/brevo-php": "~v2.0",
         "symfony/brevo-mailer": "~7.0.3",
         "symfony/http-client": "^7.0"
     },
