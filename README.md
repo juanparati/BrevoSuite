@@ -14,6 +14,10 @@ It provides the following features
 
 ## Installation
 
+For Laravel 12.x
+
+      composer require juanparati/brevosuite "^12.0"
+
 For Laravel 11.x
 
       composer require juanparati/brevosuite "^11.0"
