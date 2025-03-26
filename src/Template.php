@@ -4,11 +4,8 @@ namespace Juanparati\BrevoSuite;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Traits\Macroable;
-
 use Juanparati\BrevoSuite\Contracts\TemplateTransport as TemplateTransportContract;
 use Brevo\Client\Api\TransactionalEmailsApi;
-use Brevo\Client\ApiException;
-
 
 /***
  * Brevo Template message.
@@ -18,14 +15,6 @@ use Brevo\Client\ApiException;
 class Template
 {
     use Macroable;
-
-    /**
-     * Default placeholder quote symbol.
-     *
-     * @see https://help.brevo.com/hc/en-us/articles/209557065-Customize-transactional-email-templates
-     */
-    const PLACEHOLDER_QUOTE = '%';
-
 
     /**
      * Template model.
@@ -63,7 +52,6 @@ class Template
         $this->reset();
     }
 
-
     /**
      * Reset message model.
      *
@@ -75,7 +63,6 @@ class Template
 
         return $this;
     }
-
 
     /**
      * Send the message using the given mailer.
@@ -95,31 +82,6 @@ class Template
         }
         else
             return $this->transport->send($template_id, $this);
-    }
-
-
-    /**
-     * Build the view for the message.
-     *
-     * @param $template_id
-     * @return array|string
-     * @throws ApiException
-     */
-    public function buildView($template_id): array|string
-    {
-        $template = $this->instance->getSmtpTemplate($template_id);
-
-        // Replace attributes placeholders
-        foreach ($this->model->attributes as $placeholder => $value)
-        {
-            $template = str_replace(
-                static::PLACEHOLDER_QUOTE . $placeholder . static::PLACEHOLDER_QUOTE,
-                $value,
-                $template);
-        }
-
-
-        return $template['htmlContent'];
     }
 
 
