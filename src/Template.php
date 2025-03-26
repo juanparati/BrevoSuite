@@ -368,12 +368,12 @@ class Template
     /**
      * Attach documents by URL.
      *
-     * @param array $file
+     * @param string|array $file
      * @return $this
      */
-    public function attachURL($file): static
+    public function attachURL(string|array $file): static
     {
-        $this->model->attachmentURL = $file;
+        $this->model->attachmentsURL = array_merge($this->model->attachmentsURL, \Arr::wrap($file));
 
         return $this;
     }
