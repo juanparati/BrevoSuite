@@ -5,7 +5,7 @@ use Juanparati\BrevoSuite\Client;
 use Juanparati\BrevoSuite\Sms;
 
 
-interface SMSTransport
+interface SmsTransport
 {
 
     /**
