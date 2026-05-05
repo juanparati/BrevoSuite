@@ -13,7 +13,7 @@
         "sms"
     ],
     "require": {
-        "php": ">=8.2",
+        "php": ">=8.3",
         "laravel/framework": "^13.0",
         "illuminate/mail": "^13.0",
         "getbrevo/brevo-php": "~v2.0",
